@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: cyan;
+}
+.container {
+    width: 600px;
+    height: 100%;
+    margin: 20px auto;
+}
+.container .friend {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.container .friend ul {
+     display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    background: rgb(74, 73, 80);
+    border-bottom-left-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.container .friend .search {
+    flex: 1;
+    background: rgb(74, 73, 80);
+    border-top-left-radius: 10px;
+}
+.avatar img {
+    font-size: 20px; 
+    float: left;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: fill;
+    border: 3px solid #5c5959;
+    margin-left: 15px;
+} 
+input[type="text"] {
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    background: #b3b4b4;
+    font-size: 15px;
+    height: 40px;
+    border-style: none;
+    color: whitesmoke;
+}
+button[type="submit"] {
+    width: 10%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #b3b4b4;
+    cursor: pointer;
+}
+.container .friend ul li {
+    position: static;
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+}
+.friend ul li .offline p > i,
+.friend ul li .online p > i {
+    font-size: 8px;
+    margin-left: 15px;
+}
+.offline p > i {
+    color:rgb(156, 109, 22);
+}
+.online p > i {
+    color: greenyellow;
+}
+ul li .avatar > p{
+    margin-left: 80px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+.chatbox {
+    background: #F4F5FA;;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+}
+.chatbox .username .avatar img {
+    border: 3px solid greenyellow;
+}
+.chatbox .username .avatar {
+    margin-top: 10px;
+    width: 90%;
+    padding-bottom: 10px;
+}
+.chatbox .content { 
+    background:#F4F5FA;;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
+.my-name {
+    float: right;
+    margin-right: 20px;
+}
+.user .user-message .triangle {
+    border-bottom: 9px solid #91BA78;
+    margin-top: -18px;
+    margin-left: 15px;
+}
+.me .triangle {
+    border-bottom: 9px solid #9DC3E8;
+    float: right;
+    margin-top: 20px;
+    margin-right: -115px;
+}
+.user-message {
+    color: #F4F5FA;
+    width: 290px;
+    background-color:  #91BA78;
+    line-height: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    margin: 10px 0px 10px 20px;
+}
+.my-message {
+    text-align: left;
+    color: #F4F5FA;
+    width: 250px;
+    background-color:  #9DC3E8;
+    line-height: 22px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    float: right;
+    clear: right;
+}
+.typing,
+.three-dots>.fa-circle {
+    margin: 10px 0px 10px 20px;
+    background: #F4F5FA;;
+}
+.typing>.time,
+.user-chatting .time,
+.my-name .time {
+    color: #72747E;
+    font-size: 15px;
+}
+.user .user-chatting > span {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.user .user-chatting .time {
+    margin-left: 5px;
+} 
+.three-dots>.fa-circle {
+    font-size: 8px;
+    color: #91BA78;
+    margin-right: -15px;
+}
+.three-dots>.fa-circle:nth-child(2) {
+    opacity: 0.6;
+}
+.three-dots>.fa-circle:nth-child(3) {
+    opacity: 0.3;
+}
+.chatbox .content .user .user-chatting span > i,
+.chatbox .content .typing span > i {
+    font-size: 8px;
+    color: greenyellow;
+}
+.chatbox .content .me .my-name span > i {
+    font-size: 8px;
+    color: blue;
+}
+.container .chatbox .type >input[type="text"]{
+    background: white;
+    width: 89%;
+    height: 70px;
+    margin-left: 20px;
+}
+.chatbox .type .add {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+.chatbox .type .add > i {
+    font-size: smaller;
+    color: cornsilk;
+}
+.chatbox .username {
+    background: #F4F5FA;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.chatbox .type {
+    display: flex;
+    flex-direction: column;
+    background: #F4F5FA;
+    height: 100%;
+    border-bottom-right-radius: 10px;
+    margin-top: 2px solid white;
+} 
+.chatbox .type .add,
+.chatbox .type .add > i {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: rgb(92, 89, 89);
+}
+.chatbox .type .add > i {
+    cursor: pointer;
+}
+.send {
+    font-weight: bold;
+    color: #68aff3;
+    font-size: 15px;
+    margin-left: 260px;
+    cursor: pointer;
+}
+.star > i {
+    color: #b3b4b4;
+}
