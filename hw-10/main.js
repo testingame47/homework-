@@ -1,11 +1,12 @@
 const printMultiplication = number => {
-  if (number < 1 || number > 10) return;
+  if (number < 1 || number > 10) return
   console.log('in bang nhan')
   for (let i = 0; i <= 10; i++) {
     console.log(`${number} x ${i} = ${number * i}`)
   }
 }
-//b2 in cac số chẵn
+
+// b2 print even number
 const printEvenNumber = number => {
   if (number < 1 || number > 30) return;
     for (i = 1; i <= number; i++) {
@@ -13,25 +14,28 @@ const printEvenNumber = number => {
         console.log(i)
     }
 }
-// b3 tinh tong tu 1-> n
+
+// b3 sum 1-> n
 const getSum = number => {
   if (number < 1 || number > 30) return;
   let sum = 0
   for (let i = 0; i <= number; i++) {
     sum = sum + i
   }
-  return sum;
+  return sum
 }
-//b4 tinh giai thua (factorial) 
+
+// b4  factorial  
 const getFactorial = number => {
   if (number < 1 || number > 30) return;
   let factorial = 1
   for (let i = 1; i <= number; i++) {
     factorial = factorial * i
   }
-  return factorial;
+  return factorial
 }
-//Bài 5 : Hàm nhận vào 1 mảng đếm xem trong mảng có bao nhiêu số chẵn
+
+// Bài 5 : count evennumber in array
 const countEvenNumber = (array = []) => {
   let count = 0
   for (let i = 0; i <= array.length; i++) {
@@ -39,9 +43,10 @@ const countEvenNumber = (array = []) => {
       count = count + 1
     }
   }
-  return count;
+  return count
 }
-//Bài 6 : Hàm nhận vào 1 mảng chứa các chữ cái bị trùng lặp ngẫu nhiên Tính toán và trả về 1 mảng đã xóa đi các chữ cái bị trùng lặp
+
+// Bài 6 : delete (duplicate) element
 const getUniqArray = (array = []) => {
   const uniqArray = []
   for (let i = 0; i < array.length; i++) {
@@ -49,9 +54,10 @@ const getUniqArray = (array = []) => {
       uniqArray.push(array[i])
     }
   }
-  return uniqArray;
+  return uniqArray
 }
-//bài 7 tạo object
+
+//bài 7 create object
 const studentNames = [
   { id: 1, name: 'Nguyễn Thị Tèo' },
   { id: 2, name: 'Phạm Văn Bưởi' },
@@ -78,9 +84,10 @@ const creatStudentsArray = (studentNames, studentScores) => {
       }
     }
   }
-  return studentNames;
+  return studentNames
 }
-//bai 8
+
+//bai 8 find min, max score and print return the best, the worst students
 const students = [
   { id: 1, name: 'Nguyễn Thị Tèo', score: 9.2 },
   { id: 2, name: 'Phạm Văn Bưởi', score: 2.3 },
@@ -90,28 +97,31 @@ const students = [
   { id: 6, name: 'Phí Duy Quân', score: 9.6 },
   { id: 7, name: 'Trần Minh Minh', score: 6.1 }
 ]
-const findMinMaxScore = array => {
-  const bestStudent = []
-  const worstStudent = []
-  let maxScore = 0
-  let minScore = 10
-  for (let i = 1; i < students.length; i++) {
-    if (students[i].score > maxScore) {
-      maxScore = students[i].score
+const getStudentRank = (student = []) => {
+  let min = 11
+  let max = 0
+  const theBest = []
+  const theBad = []
+  students.forEach(student => {
+    if (max < student.score) {
+      max = student.score
     }
-    if (students[i].score < minScore) {
-      minScore = students[i].score
+    if (min > student.score) {
+      min = student.score
     }
-  }
-  for (let i = 0; i < students.length; i++) {
-    if (students[i].score === maxScore) {
-      bestStudent.push(array[i])
-    }
-    if (students[i].score === minScore) {
-      worstStudent.push(array[i])
-    }
-  }
-  console.log(bestStudent)
-  console.log(worstStudent)
-}
+  })
 
+  students.forEach(student => {
+    if (student.score === max) {
+      theBest.push(student)
+    }
+    if (student.score === min) {
+      theBad.push(student)
+    }
+  })
+
+  return {
+    theBest,
+    theBad
+  }
+}
