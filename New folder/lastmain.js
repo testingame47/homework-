@@ -92,8 +92,8 @@ const checkPassFail = arr => {
 const getStudent = (arr = []) => {
   const studentScore = []
   arr.map(student => {
-    let decimal = (student.score - parseInt(student.score)) * 10
-    let sum = parseInt(student.score) + Number(decimal.toFixed())
+    const decimal = (student.score - parseInt(student.score)) * 10
+    const sum = parseInt(student.score) + Number(decimal.toFixed())
     if (sum >= 10) return
     if (sum > 5) {
       studentScore.push(student)
