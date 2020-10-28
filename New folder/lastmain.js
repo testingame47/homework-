@@ -63,8 +63,7 @@ const getKey = (obj, arr) => {
 // Ex8 remove 2nd and 3rd element in array
 const removeIndex = (arr = []) => {
   if (arr.length <= 5) return
-  arr.splice(2, 2)
-  return arr
+  return arr.splice(2, 2)
 }
 
 // Ex9 
