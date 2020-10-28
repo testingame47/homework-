@@ -79,7 +79,7 @@ const repeatElement = (element, repeat) => {
   ]
   const checkPassFail = arr => {
     const newArr = []
-    arr.map(student => {
+    arr.forEach(student => {
       if (student.score > 5 && student.name.lastIndexOf('Duy', student.name.length - 4) === -1) {
         newArr.push('Pass')
       } else {
@@ -92,7 +92,7 @@ const repeatElement = (element, repeat) => {
   // Ex10
   const getStudent = (arr = []) => {
     const studentScore = []
-    arr.map(student => {
+    arr.forEach(student => {
       let decimal = (student.score - parseInt(student.score)) * 10
       let sum = parseInt(student.score) + Number(decimal.toFixed())
       if (sum >= 10) return
