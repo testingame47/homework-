@@ -103,6 +103,3 @@ const repeatElement = (element, repeat) => {
     return studentScore
   }
   
-  
-  
-  
