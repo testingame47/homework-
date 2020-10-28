@@ -20,7 +20,7 @@ const getSum = number => {
   for (let i = 0; i <= number; i++) {
     sum = sum + i
   }
-  return sum;
+  return sum
 }
 //b4 tinh giai thua (factorial) 
 const getFactorial = number => {
@@ -29,7 +29,7 @@ const getFactorial = number => {
   for (let i = 1; i <= number; i++) {
     factorial = factorial * i
   }
-  return factorial;
+  return factorial
 }
 //Bài 5 : Hàm nhận vào 1 mảng đếm xem trong mảng có bao nhiêu số chẵn
 const countEvenNumber = (array = []) => {
@@ -39,7 +39,7 @@ const countEvenNumber = (array = []) => {
       count = count + 1
     }
   }
-  return count;
+  return count
 }
 //Bài 6 : Hàm nhận vào 1 mảng chứa các chữ cái bị trùng lặp ngẫu nhiên Tính toán và trả về 1 mảng đã xóa đi các chữ cái bị trùng lặp
 const getUniqArray = (array = []) => {
@@ -49,7 +49,7 @@ const getUniqArray = (array = []) => {
       uniqArray.push(array[i])
     }
   }
-  return uniqArray;
+  return uniqArray
 }
 //bài 7 tạo object
 const studentNames = [
@@ -78,7 +78,7 @@ const creatStudentsArray = (studentNames, studentScores) => {
       }
     }
   }
-  return studentNames;
+  return studentNames
 }
 //bai 8
 const students = [
