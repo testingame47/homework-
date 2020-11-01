@@ -1,5 +1,5 @@
 // Exercise 1:
-const checkisEqual = (firstArr, secondArray) => {
+const checkIsEqual = (firstArr, secondArray) => {
   return JSON.stringify(firstArr) === JSON.stringify(secondArray)
 }
 // Exercise 2:
@@ -20,7 +20,7 @@ const chunkArray = (array, chunkSize) => {
 const findSameElement = (firstArr, secondArray) => firstArr.filter(val => secondArray.includes(val))
 
 // Exercise 5:
-const checkSaletime = time => {
+const checkSaleTime = time => {
   const finalSaleTime = new Date('30 Oct 2020 12:30:32')
   return Date.parse(time) <= Date.parse(finalSaleTime)
 }
